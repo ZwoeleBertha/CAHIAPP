@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "336046484597",
+    "firebase_url": "https://cahiapp.firebaseio.com",
+    "project_id": "cahiapp",
+    "storage_bucket": "cahiapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336046484597:android:87e794cde8e19de0151c3c",
+        "android_client_info": {
+          "package_name": "com.example.cahiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336046484597-emu74qfg02nlcuk30ekfs5caik602cvi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cahiapp",
+            "certificate_hash": "af7b78f41e87924e75c344ffcd20bddc472403d8"
+          }
+        },
+        {
+          "client_id": "336046484597-0pqpcqkm6crr6ggi5qcks311u7rd2p0s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4J2cICotwb_TsxWmWW-aqJKqSSbWm-w0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336046484597-0pqpcqkm6crr6ggi5qcks311u7rd2p0s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
