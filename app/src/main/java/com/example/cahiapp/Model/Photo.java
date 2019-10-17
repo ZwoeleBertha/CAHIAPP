@@ -80,6 +80,5 @@ public class Photo extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             mimageView.setImageBitmap(imageBitmap);
         }
-
     }
 }
