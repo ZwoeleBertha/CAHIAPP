@@ -1,3 +1,7 @@
 <resources>
+
     <string name="app_name">CAHIAPP</string>
+    <string name="not_log_in">Login failed</string>
+
+
 </resources>

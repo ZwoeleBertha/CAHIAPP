@@ -4,6 +4,13 @@ package com.example.cahiapp.Model;
 //TODO: add imports
 
 
+import android.content.Intent;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import java.util.Arrays;
+
 public class User {
 
     private int userId;
@@ -59,6 +66,10 @@ public class User {
         this.userIcon = userIcon;
 
     }
+
+
+
+
 
     public void loginUser() {
 
