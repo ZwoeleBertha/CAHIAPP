@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Model.Photo">
+      <!--<activity android:name=".Model.Photo"></activity>-->
 
 
         <activity android:name=".Controller.MainActivity"></activity>
