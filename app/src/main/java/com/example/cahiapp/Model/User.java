@@ -35,8 +35,6 @@ public class User {
         this.userName = name;
         this.userTag = tag;
         this.gallery = gallery;
-
-        //TODO: voeg hier een standaard icon aan toe, dmv een methode!
       //  this.userIcon = standaardIcon
     }
 
