@@ -5,9 +5,9 @@
 
     <uses-feature
         android:name="android.hardware.Camera"
-        android:required="true"/>
+        android:required="true" />
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -17,20 +17,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-      <!--<activity android:name=".Model.Photo"></activity>-->
-
-
-        <activity android:name=".Controller.MainActivity"></activity>
-
+        <activity android:name=".Controller.UserProfileActivity"></activity>
+        <!-- <activity android:name=".Model.Photo"></activity> -->
+        <activity android:name=".Controller.MainActivity" />
         <activity android:name=".Controller.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
     </application>
 
 </manifest>

@@ -30,6 +30,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button profileButton = findViewById(R.id.userProfileButton);
+
+        //SignOut button functionaliteit
+        profileButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                switch (view.getId()) {
+
+                    case R.id.userProfileButton:
+                        gotoUserProfile();
+                        break;
+                }
+            }
+
+        });
+
+    }
+
+    private void gotoUserProfile() {
+        Intent intent = new Intent(this, UserProfileActivity.class);
+     //   intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
 }
