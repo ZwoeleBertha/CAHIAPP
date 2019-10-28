@@ -97,7 +97,7 @@ public class Photo extends AppCompatActivity {
     @Override
     protected  void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.photo_activity_main);
+        setContentView(R.layout.fragment_add_photo);
 
         //Display Photo
         mImageView = findViewById(R.id.imageView);

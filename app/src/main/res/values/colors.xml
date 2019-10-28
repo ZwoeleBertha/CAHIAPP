@@ -5,4 +5,7 @@
     <color name="colorAccent">#673AB7</color>
     <color name="colorBlack">#000000</color>
 
+    <color name="white">#FFFFFF</color>
+    <color name="whiteTrans">#aaa</color>
+
 </resources>
