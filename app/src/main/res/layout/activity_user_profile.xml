@@ -6,42 +6,42 @@
     android:id="@+id/activity_user_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingTop="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
     android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
     tools:context=".Controller.UserProfileActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Your CAHIA Profile"
-        android:textSize="40sp" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your CAHIA Profile"
+            android:textSize="40sp" />
 
-    <ImageView
-        android:id="@+id/profileImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_margin="8dp"
-        android:background="@color/colorAccent"
-        tools:src="@tools:sample/avatars" />
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:background="@color/colorAccent"
+            tools:src="@tools:sample/avatars" />
 
-    <TextView
-        android:id="@+id/nameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="A name should be here"
-        android:textColorLink="#000E0C0C"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A name should be here"
+            android:textColorLink="#000E0C0C"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/emailTextView"
@@ -58,11 +58,11 @@
 
     <Button
         android:id="@+id/signOutButton"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="logOut"
-        android:text="Sign out"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+        android:text="Sign out"/>
 
 
 </LinearLayout>

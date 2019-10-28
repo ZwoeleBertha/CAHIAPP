@@ -20,7 +20,7 @@
 
 
         <activity android:name=".Controller.UserProfileActivity"></activity>
-        <activity android:name=".Model.Photo"></activity>
+<!--        <activity android:name=".Model.Photo"></activity>-->
         <activity android:name=".Controller.MainActivity" />
         <activity android:name=".Controller.LoginActivity">
             <intent-filter>
