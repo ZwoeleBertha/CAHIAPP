@@ -17,7 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:gravity="center"
+        android:gravity="center_horizontal"
+        android:layout_gravity="top"
         android:orientation="vertical">
 
         <TextView
@@ -25,13 +26,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Your CAHIA Profile"
-            android:textSize="40sp" />
+            android:textSize="36sp" />
 
         <ImageView
             android:id="@+id/profileImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_margin="8dp"
+            android:layout_margin="12dp"
             android:background="@color/colorAccent"
             tools:src="@tools:sample/avatars" />
 
@@ -39,6 +40,7 @@
             android:id="@+id/nameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="3dp"
             android:text="A name should be here"
             android:textColorLink="#000E0C0C"
             android:textSize="24sp" />
@@ -52,17 +54,16 @@
             android:textColorLink="#000E0C0C"
             android:textSize="16dp" />
 
+        <Button
+            android:id="@+id/signOutButton"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="logOut"
+            android:text="Sign out" />
+
 
     </LinearLayout>
-
-
-    <Button
-        android:id="@+id/signOutButton"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="logOut"
-        android:text="Sign out"/>
 
 
 </LinearLayout>
