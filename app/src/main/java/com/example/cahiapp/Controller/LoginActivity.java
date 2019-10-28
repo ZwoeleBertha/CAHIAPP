@@ -14,6 +14,7 @@ import com.example.cahiapp.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInApi;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
@@ -21,15 +22,18 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 
- public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
 
-    private GoogleApiClient googleApiClient;
+    GoogleApiClient mGoogleApiClient;
 
     private SignInButton signInButton;
 
-    public static final int SIGN_IN_CODE = 777;
+    //private FirebaseAuth mAuth;
+    private static final String TAG = "SignInActivity";
+    private static final int SIGN_IN_CODE = 777;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,22 +44,35 @@ import com.google.android.gms.tasks.Task;
                 .requestEmail()
                 .build();
 
-        googleApiClient = new GoogleApiClient.Builder(this)
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .enableAutoManage(this, this)
-                .addApi(Auth.GOOGLE_SIGN_IN_API)
+                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
         signInButton = (SignInButton) findViewById(R.id.signInButton);
-        signInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
-                startActivityForResult(intent, SIGN_IN_CODE);
-
-            }
-        });
+        signInButton.setOnClickListener(this);
 
     }
+
+        @Override
+        public void onClick(View view) {
+
+           switch(view.getId()) {
+               case R.id.signInButton:
+                   Toast.makeText(this, "SignIn Button clicked", Toast.LENGTH_SHORT);
+                   signIn();
+                   break;
+
+                }
+
+            }
+
+
+        private void signIn() {
+
+            Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+            startActivityForResult(signInIntent, SIGN_IN_CODE);
+        }
 
     @Override
      public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
@@ -70,31 +87,30 @@ import com.google.android.gms.tasks.Task;
 
              //TODO: kijken of we hier misschien Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data); van moeten maken!
              //GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
 
              //handleSignInResult(result);
 
-             handleSignInResult(task);
+             handleSignInResult(result);
 
 
          }
      }
 
-     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
+     private void handleSignInResult(GoogleSignInResult signInResult) {
 
-        try {
+        Log.d(TAG, "handleSignInResult:" + signInResult.isSuccess());
+        if (signInResult.isSuccess()) {
 
-            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
-
-            //When signed in succesfully, go to main page
-
+            Toast.makeText(this, "Signed in Succesfully!", Toast.LENGTH_LONG).show();
+            GoogleSignInAccount account = signInResult.getSignInAccount();
             goMainScreen();
 
         }
-        catch (ApiException e) {
+        else {
 
-            Toast.makeText(this, getString(R.string.not_log_in) , Toast.LENGTH_SHORT).show();
-            Log.v("Error", "SignInResult:failed code=" + e.getStatusCode());
+
+            Toast.makeText(this, "Helaas, signin Failed! Tuzzz", Toast.LENGTH_LONG).show();
         }
 
 
