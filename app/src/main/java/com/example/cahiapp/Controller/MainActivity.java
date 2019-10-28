@@ -65,14 +65,15 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 int id = menuItem.getItemId();
                 if (id == R.id.home) {
-                    setFragment(homeFragment);
-                    return true;
+                    Intent a = new Intent (MainActivity.this, MainActivity.class);
+                    startActivity(a);
                 } else if (id == R.id.addPhoto) {
                     setFragment(addPhotoFragment);
                     return true;
                 } else if (id == R.id.account) {
-                    setFragment(accountFragment);
-                    return true;
+                    Intent i = new Intent (MainActivity.this, UserProfileActivity.class);
+                    startActivity(i);
+
 
                 }
                 return false;
