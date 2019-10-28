@@ -37,28 +37,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button profileButton = findViewById(R.id.userProfileButton);
 
         //SignOut button functionaliteit
-        profileButton.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-                switch (view.getId()) {
-
-                    case R.id.userProfileButton:
-                        gotoUserProfile();
-                        break;
-                }
-            }
-
-        });
 
         BottomNavigationView navigationView = findViewById(R.id.bottom_nav);
 
-        final HomeFragment homeFragment = new HomeFragment();
         final AddPhotoFragment addPhotoFragment = new AddPhotoFragment();
-        final AccountFragment accountFragment = new AccountFragment();
 
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
