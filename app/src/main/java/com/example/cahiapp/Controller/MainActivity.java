@@ -2,6 +2,7 @@ package com.example.cahiapp.Controller;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.EventLog;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,12 +23,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.core.view.Event;
 
 
 public class MainActivity extends AppCompatActivity {
 
 
     private FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
     }
-
 }
 
 
