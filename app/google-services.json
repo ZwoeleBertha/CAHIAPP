@@ -8,12 +8,44 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:336046484597:android:87e794cde8e19de0151c3c",
+        "mobilesdk_app_id": "1:336046484597:android:9805300db41bb83d151c3c",
         "android_client_info": {
           "package_name": "com.example.cahiapp"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "336046484597-nd64voav2d483gb8bk2c7emrncqi4pkg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cahiapp",
+            "certificate_hash": "87196e084fda43bd2623bbe76b0c3429dfa71560"
+          }
+        },
+        {
+          "client_id": "336046484597-6rei2hts6grphkd1kudj29ehk63fpoar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cahiapp",
+            "certificate_hash": "fddcf7be4480e4dfe5bb0064aeff0d1bf5347c5e"
+          }
+        },
+        {
+          "client_id": "336046484597-m689a68m8d5fcua59vpf5pdnlj4rr1ls.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cahiapp",
+            "certificate_hash": "6621ac9ac85582885fc6532b4a21469ea51a58bd"
+          }
+        },
+        {
+          "client_id": "336046484597-c0gk66urdkvr62k4ap7iq9jqoeqck1g3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cahiapp",
+            "certificate_hash": "314ca4241ab1661f45b4b442fd62a72c817daf86"
+          }
+        },
         {
           "client_id": "336046484597-emu74qfg02nlcuk30ekfs5caik602cvi.apps.googleusercontent.com",
           "client_type": 1,
