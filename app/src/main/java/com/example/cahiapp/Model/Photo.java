@@ -101,7 +101,7 @@ public class Photo extends AppCompatActivity {
 
         //Display Photo
         mImageView = findViewById(R.id.imageView);
-        mChooseBtn = findViewById(R.id.choose_image_btn);
+        mChooseBtn = findViewById(R.id.ChoosePicture);
 
         //Handle button action
         mChooseBtn.setOnClickListener(new View.OnClickListener() {

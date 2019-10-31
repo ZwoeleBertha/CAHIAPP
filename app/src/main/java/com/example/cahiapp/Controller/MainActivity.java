@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
                     Intent a = new Intent (MainActivity.this, MainActivity.class);
                     startActivity(a);
                 } else if (id == R.id.addPhoto) {
-                    setFragment(addPhotoFragment);
-                    return true;
+                    Intent p = new Intent (MainActivity.this, AddPhotoActivity.class);
+                    startActivity(p);
                 } else if (id == R.id.account) {
                     Intent i = new Intent (MainActivity.this, UserProfileActivity.class);
                     startActivity(i);
