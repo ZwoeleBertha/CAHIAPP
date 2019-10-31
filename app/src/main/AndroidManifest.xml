@@ -33,6 +33,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Controller.MainActivity" />
         </activity>
+
+        <activity android:name=".Controller.AddPhotoActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Controller.AddPhotoActivity" />
+        </activity>
+<!--        <activity android:name=".Model.Photo"></activity>-->
+
     </application>
 
 </manifest>

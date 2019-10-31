@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "336046484597-kd4domob9kvb5vd25u81ob64v0t93k0p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cahiapp",
+            "certificate_hash": "6a4cee1c82229784e1c58ad11e0cb4c03416898b"
+          }
+        },
+        {
           "client_id": "336046484597-nd64voav2d483gb8bk2c7emrncqi4pkg.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
