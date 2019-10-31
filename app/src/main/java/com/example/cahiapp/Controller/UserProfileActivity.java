@@ -55,6 +55,9 @@ public class UserProfileActivity extends AppCompatActivity implements GoogleApiC
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
+
+
+
     }
 
     @Override

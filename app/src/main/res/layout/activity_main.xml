@@ -8,8 +8,6 @@
     tools:context=".Controller.MainActivity">
 
 
-
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,12 +17,6 @@
         app:itemBackground="@color/colorPrimaryDark"
         app:itemIconTint="@color/bottom_nav_color"
         app:itemTextColor="@color/bottom_nav_color"/>
-    
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_nav"
-        android:id="@+id/frame"/>
 
 </RelativeLayout>
 

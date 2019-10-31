@@ -29,6 +29,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
     GoogleApiClient mGoogleApiClient;
 
+
     private SignInButton signInButton;
 
     //private FirebaseAuth mAuth;
@@ -104,7 +105,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
             Toast.makeText(this, "Signed in Succesfully!", Toast.LENGTH_LONG).show();
             GoogleSignInAccount account = signInResult.getSignInAccount();
-            goMainScreen();
+            goWelcomeScreen();
 
         }
         else {
@@ -126,8 +127,8 @@ import com.google.firebase.auth.FirebaseAuth;
 //        }
 //     }
 
-     private void goMainScreen() {
-        Intent intent = new Intent(this, MainActivity.class);
+     private void goWelcomeScreen() {
+        Intent intent = new Intent(this, WelcomeScreenActivity.class);
         intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
      }

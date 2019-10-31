@@ -2,6 +2,7 @@ package com.example.cahiapp.Controller;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.EventLog;
 import android.util.Log;
 import android.view.MenuItem;
@@ -28,7 +29,7 @@ import com.google.firebase.database.core.view.Event;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private static int SPLASH_TIME_OUT = 4000;
     private FirebaseAuth mAuth;
 
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
 
         //SignOut button functionaliteit
@@ -67,16 +69,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void gotoUserProfile() {
-        Intent intent = new Intent(this, UserProfileActivity.class);
-     //   intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-    }
 
     private void setFragment(Fragment fragment) {
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager() .beginTransaction();
-        fragmentTransaction.replace(R.id.frame, fragment);
-        fragmentTransaction.commit();
+
     }
 }
 
