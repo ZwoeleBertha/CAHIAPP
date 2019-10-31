@@ -1,5 +1,6 @@
 package com.example.cahiapp.Controller;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -10,6 +11,7 @@ import com.bumptech.glide.Glide;
 import com.example.cahiapp.R;
 
 import static com.bumptech.glide.Glide.with;
+import static java.lang.System.load;
 
 public class SentenceOTDActivity extends AppCompatActivity {
     private ImageView imageView3;
@@ -23,29 +25,21 @@ public class SentenceOTDActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sentence_of_the_day_page);
 
-        imageView3 = (ImageView) findViewById(R.id.imageView2);
-        imageView5 = (ImageView) findViewById(R.id.imageView1);
-        imageView6 = (ImageView) findViewById(R.id.imageView3);
+        imageView3 = (ImageView) findViewById(R.id.imageView3);
+        imageView5 = (ImageView) findViewById(R.id.imageView5);
+        imageView6 = (ImageView) findViewById(R.id.imageView6);
 
-        loadImageByInternetURL("https://www.nocowboys.co.nz/images/v3/no-image-available.png",imageView3);
+        loadImageByInternetURL();
 
 
     }
 
-    private void loadImageByInternetURL(String URL, ImageView imageView){
+    private void loadImageByInternetURL(){
         String internetURL = "https://www.nocowboys.co.nz/images/v3/no-image-available.png";
 
         Glide
                 .with(context)
-                .load(URL)
+                .load(internetURL)
                 .into(imageView3);
-        Glide
-                .with(context)
-                .load(internetURL)
-                .into(imageView5);
-        Glide
-                .with(context)
-                .load(internetURL)
-                .into(imageView6);
     }
 }
