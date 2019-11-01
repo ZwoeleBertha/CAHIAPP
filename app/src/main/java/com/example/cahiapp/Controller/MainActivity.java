@@ -66,12 +66,11 @@ public class MainActivity extends AppCompatActivity {
                 } else if (id == R.id.account) {
                     Intent i = new Intent (MainActivity.this, UserProfileActivity.class);
                     startActivity(i);
-
-
                 }
                 return false;
             }
         });
+<<<<<<< Updated upstream
 
         imageView1 = (ImageView) findViewById(R.id.imageView1);
         imageView2 = (ImageView) findViewById(R.id.imageView2);
@@ -87,8 +86,9 @@ public class MainActivity extends AppCompatActivity {
                 .with(context)
                 .load(URL)
                 .into(imageView);
+=======
+>>>>>>> Stashed changes
     }
-
 
     private void setFragment(Fragment fragment) {
 
