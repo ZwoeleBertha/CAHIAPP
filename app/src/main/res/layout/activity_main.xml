@@ -71,6 +71,7 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="59dp"
         android:layout_marginBottom="225dp"
+        android:scaleType="fitXY"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
     <ImageView

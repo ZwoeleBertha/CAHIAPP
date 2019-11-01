@@ -12,6 +12,7 @@ import android.webkit.MimeTypeMap;
 import android.widget.ImageView;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +25,9 @@ import com.example.cahiapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.core.view.Event;
+import com.google.firebase.storage.StorageReference;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -83,6 +86,10 @@ public class MainActivity extends AppCompatActivity {
         imageView1 = (ImageView) findViewById(R.id.imageView1);
         imageView2 = (ImageView) findViewById(R.id.imageView2);
         imageView3 = (ImageView) findViewById(R.id.imageView3);
+        imageView4 = (ImageView) findViewById(R.id.imageView4);
+        imageView5 = (ImageView) findViewById(R.id.imageView5);
+        imageView6 = (ImageView) findViewById(R.id.imageView6);
+
 
         loadImageByInternetURL("https://firebasestorage.googleapis.com/v0/b/cahiapp.appspot.com/o/broom.jpg?alt=media&token=db5af279-35ec-4204-8fb2-2ff26af5cb0f",imageView1);
         loadImageByInternetURL("https://firebasestorage.googleapis.com/v0/b/cahiapp.appspot.com/o/urn.jpg?alt=media&token=e3566560-b62f-4b4e-bb8a-d35c96196d49",imageView2);
