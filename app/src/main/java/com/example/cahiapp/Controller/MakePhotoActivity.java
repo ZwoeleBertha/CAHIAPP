@@ -48,7 +48,7 @@ public class MakePhotoActivity extends AppCompatActivity {
 
         //Display Photo
         imageView = findViewById(R.id.imageView);
-        TakePicture = findViewById(R.id.ChoosePicture);
+        TakePicture = findViewById(R.id.TakePicture);
 
         //Handle button action
         TakePicture.setOnClickListener(new View.OnClickListener() {

@@ -23,11 +23,24 @@
         android:layout_marginTop="55dp"
         android:src="@mipmap/ic_launcher" />
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_marginBottom="16dp" />
+
     <Button
         android:id="@+id/ChoosePicture"
         style="@style/Base.Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="61dp"
         android:text="Choose image from gallery" />
+
+    <Button
+        android:id="@+id/button_upload"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:text="Upload" />
 
 </LinearLayout>

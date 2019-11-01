@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.cahiapp.Model.Photo"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <Button
         android:id="@+id/TakePicture"
@@ -21,7 +22,15 @@
         android:layout_height="250dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="55dp"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="TODO" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/ChoosePicture"
@@ -29,5 +38,12 @@
         android:layout_width="match_parent"
         android:layout_height="61dp"
         android:text="Choose image from gallery" />
+
+
+    <Button
+        android:id="@+id/button_upload"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:text="Upload" />
 
 </LinearLayout>

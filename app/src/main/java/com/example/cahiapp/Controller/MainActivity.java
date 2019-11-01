@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent a = new Intent (MainActivity.this, MainActivity.class);
                     startActivity(a);
                 } else if (id == R.id.addPhoto) {
-                    Intent p = new Intent (MainActivity.this, AddPhotoActivity.class);
+                    Intent p = new Intent(MainActivity.this, AddPhotoActivity.class);
                     startActivity(p);
                 } else if (id == R.id.account) {
                     Intent i = new Intent (MainActivity.this, UserProfileActivity.class);
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-<<<<<<< Updated upstream
+
 
         imageView1 = (ImageView) findViewById(R.id.imageView1);
         imageView2 = (ImageView) findViewById(R.id.imageView2);
@@ -86,8 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 .with(context)
                 .load(URL)
                 .into(imageView);
-=======
->>>>>>> Stashed changes
+
     }
 
     private void setFragment(Fragment fragment) {
