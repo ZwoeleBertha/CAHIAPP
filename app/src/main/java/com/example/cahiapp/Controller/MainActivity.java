@@ -1,11 +1,14 @@
 package com.example.cahiapp.Controller;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.EventLog;
 import android.util.Log;
+import android.webkit.MimeTypeMap;
 import android.widget.ImageView;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,7 +30,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.core.view.Event;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -40,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView sotd;
     private Context context = MainActivity.this;
     private String URL = "https://www.oprolletjes.nl/wp-content/uploads/2018/03/Leger-gaat-het-niet-worden.png";
-
+    private StorageReference mStorageRef;
+    private DatabaseReference mDatabaseRef;
     private static int SPLASH_TIME_OUT = 4000;
     private FirebaseAuth mAuth;
 
@@ -51,9 +59,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         sotd = (TextView)findViewById(R.id.sotd);
         sotd.setText("It is my mother in laws birthday and this is her present!");
-
-
-        //SignOut button functionaliteit
 
 
         BottomNavigationView navigationView = findViewById(R.id.bottom_nav);
