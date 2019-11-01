@@ -1,37 +1,32 @@
 package com.example.cahiapp.Controller;
 
-public class Upload {
-    private String mName;
-    private String mImageUrl;
+import android.net.Uri;
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.StorageTask;
+
+public class Upload extends AppCompatActivity {
+
+    Uri umageUri;
+    String myUrl = "" ;
+    StorageTask uploadTask;
+    StorageReference storageReference;
+
+    ImageView close, image_added;
+    TextView post;
+    EditText description;
 
 
-    public Upload() {
-        //lege constructor is nodig!
-    }
-
-    public  Upload(String name, String imageUrl){
-        if (name.trim().equals("")) {
-            name = "No Name";
-        }
-
-        mName = name;
-        mImageUrl = imageUrl;
-
-    }
-
-    public String getName() {
-        return mName;
-    }
-
-    public void setName(String name) {
-        mName = name;
-    }
-
-    public String getmImageUrl(){
-        return mImageUrl;
-    }
-
-    public void setmImageUrl(String imageUrl){
-        mImageUrl = imageUrl;
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 }
+

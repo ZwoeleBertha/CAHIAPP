@@ -7,13 +7,6 @@
     tools:context="com.example.cahiapp.Model.Photo"
     android:orientation="vertical">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="55dp"
-        android:onClick="takePicture"
-        android:text="Take a picture" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -29,6 +22,14 @@
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_marginBottom="16dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="55dp"
+        android:onClick="takePicture"
+        android:text="Take a picture" />
 
     <Button
         android:id="@+id/ChoosePicture"
