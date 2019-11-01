@@ -1,15 +1,8 @@
 package com.example.cahiapp.Controller;
 
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.EventLog;
-import android.util.Log;
-import android.webkit.MimeTypeMap;
-import android.widget.ImageView;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,13 +13,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.bumptech.glide.Glide;
-import com.example.cahiapp.Model.User;
 import com.example.cahiapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.core.view.Event;
 import com.google.firebase.storage.StorageReference;
 
 
@@ -72,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent a = new Intent (context, MainActivity.class);
                     context.startActivity(a);
                 } else if (id == R.id.addPhoto) {
-                    Intent p = new Intent(MainActivity.this, AddPhotoActivity.class);
+                    Intent p = new Intent(MainActivity.this, PostActivity.class);
                     startActivity(p);
                 } else if (id == R.id.account) {
                     Intent i = new Intent (MainActivity.this, UserProfileActivity.class);
